@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Survey</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: white;
+        }
+        #question {
+            font-size: 40px;
+            text-align: center;
+            margin-top: 100px;
+        }
+        #btnYes {
+            font-size: 20px;
+            position: absolute;
+            left: 170px;
+            top: 190px;
+        }
+        #btnNo {
+            font-size: 20px;
+            position: absolute;
+            left: 350px;
+            top: 100px;
+        }
+    </style>
+</head>
+<body>
+    <div id="question">Quer fazer dar certo?</div>
+    <button id="btnYes">Sim</button>
+    <button id="btnNo">Com toda certeza</button>
+
+    <script>
+        function moveButton() {
+            var btnYes = document.getElementById("btnYes");
+            btnYes.style.left = Math.floor(Math.random() * 500) + "px";
+            btnYes.style.top = Math.floor(Math.random() * 500) + "px";
+        }
+
+        function showMessage() {
+            alert("Eu também");
+        }
+
+        document.getElementById("btnYes").addEventListener("mouseover", moveButton);
+        document.getElementById("btnNo").addEventListener("click", showMessage);
+    </script>
+</body>
+</html>
